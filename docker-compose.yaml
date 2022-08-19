@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  fabio-nginx:
+    image: nginx
+    ports:
+      - "8000:80"
+    volumes:
+      #diretorio do site
+      - /home/fabio/projeto/site/projeitosite:/usr/share/nginx/html
+      - /home/fabio/projeto/site/projeitosite/site2:/usr/share/nginx/html/site2
+
+      #diretorio do virtualhost
+      - /home/fabio/projeto/site/projeitosite/nginx:/etc/nginx/conf.d/
+
+
+
+  fabio-jenkins:
+    image: jenkins/jenkins:lts-jdk11
+    ports:
+      - "50000:50000"
+      - "8080:8080"
+    volumes:
+      - /home/fabio/jenkins:/var/jenkins_home
+
+  
