@@ -1,1 +1,0 @@
-# teste-docker-compose
