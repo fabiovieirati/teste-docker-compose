@@ -8,8 +8,8 @@ services:
       - "8000:80"
     volumes:
       #diretorio do site
-      - /home/fabio/projeto/site/projeitosite:/usr/share/nginx/html
-      - /home/fabio/projeto/site/projeitosite/site2:/usr/share/nginx/html/site2
+      - ./projeitosite:/usr/share/nginx/html
+      - ./site2:/usr/share/nginx/html/site2
 
       #diretorio do virtualhost
       - /home/fabio/projeto/site/projeitosite/nginx:/etc/nginx/conf.d/
