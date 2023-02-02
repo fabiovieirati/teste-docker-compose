@@ -12,7 +12,7 @@ services:
       - ./site2:/usr/share/nginx/html/site2
 
       #diretorio do virtualhost
-      - /home/fabio/projeto/site/projeitosite/nginx:/etc/nginx/conf.d/
+      - ./nginx:/etc/nginx/conf.d/
 
 
 
